@@ -3,6 +3,7 @@ package com.bkmzdev.dreamjournal.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "Emotes")
 data class Emotes(
@@ -23,7 +24,7 @@ data class Emotes(
 
     @ColumnInfo(name = "date")
     var date: String,
-){
+): Serializable {
     override fun toString(): String {
         return "$emotion: $date"
     }
